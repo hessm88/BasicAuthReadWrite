@@ -5,12 +5,10 @@
   <!--import these packages for documentation-->
   <api-import pattern="basicAuthRW.*"/>
   <webapp mergeWebXML="src/main/webapp/WEB-INF/web.xml"/>
-  <!--<webapp mergeWebXML="../watch-config/webapp/WEB-INF/web.xml"/>-->
   <modules>
     <!--use the documentation for the 'basicAuthRW.we.ws'
     package for the documentation splash page.-->
-    <docs splashPackage="basicAuthRW.web.ws">
-    </docs>
+    <docs splashPackage="basicAuthRW.web.ws"/>
 
     <spring-app>
       <springImport uri="classpath:/basic-auth-rw-core-beans.xml"/>
