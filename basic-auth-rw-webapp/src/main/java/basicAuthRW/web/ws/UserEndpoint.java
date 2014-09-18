@@ -48,7 +48,7 @@ public class UserEndpoint implements UserAPI {
     }
 
     User user = nameService.getUser(userEmail);
-    return (user == null) ? Response.serverError().build() : Response.ok().entity("User\'s user: <b>" + user.getFirstName() +
+    return (user == null) ? Response.serverError().build() : Response.ok().entity("User\'s name: <b>" + user.getFirstName() +
       " " + user.getLastName() + "</b>. <br/>Email: <b>" + userEmail + "</b>").build();
   }
 
