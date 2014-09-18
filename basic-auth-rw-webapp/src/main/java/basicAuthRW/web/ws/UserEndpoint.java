@@ -17,7 +17,7 @@ import org.codehaus.enunciate.jaxrs.StatusCodes;
 /**
  * Endpoint for basic user account functionality
  */
-@Path("/name")
+@Path("/user")
 public class UserEndpoint implements UserAPI {
 
   static final String EMAIL_PARAM_NAME = "email";
