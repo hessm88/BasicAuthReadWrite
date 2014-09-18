@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api-docs title="basic-auth-rw-webapp">
+  <documentation>
+    <![CDATA[]]>
+  </documentation>
+  <data>
+  </data>
+  <soap>
+    <wsdls>
+    </wsdls>
+  </soap>
+  <rest baseAddress="http://localhost:8080/basic-auth-rw-webapp" wadl="application.wadl">
+    <resources>
+      <resource name="/auth/admin" subcontext="/rest">
+        <facets>
+          <facet>
+            <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+            <value>AuthEndpoint</value>
+            <documentation><![CDATA[Endpoint for Login, logout, and admin functions.]]></documentation>
+          </facet>
+        </facets>
+        <operation name="GET">
+            <additionalHeaderLabels>
+            </additionalHeaderLabels>
+          <documentation>
+            <![CDATA[(Admin) Retrieve all active emails and associated session ID's
+
+Logout the user associated with the email account]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/auth/admin"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/auth/admin"/>
+          <parameter name="session-id" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the session ID assigned to the user upon login.]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+          <statusCode code="200 OK">
+            <condition><![CDATA[Admin requested info has been sent]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="403 Forbidden">
+            <condition><![CDATA[Incorrect admin email and session ID]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+        </operation>
+      </resource>
+      <resource name="/auth/login" subcontext="/rest">
+        <facets>
+          <facet>
+            <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+            <value>AuthEndpoint</value>
+            <documentation><![CDATA[Endpoint for Login, logout, and admin functions.]]></documentation>
+          </facet>
+        </facets>
+        <operation name="GET">
+            <additionalHeaderLabels>
+            </additionalHeaderLabels>
+          <documentation>
+            <![CDATA[Login the user associated with the email account]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/auth/login"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/auth/login"/>
+          <parameter name="email" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the email of the user logging in]]>
+          </parameter>
+          <parameter name="password" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the password associated with the email]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+          <statusCode code="200 OK">
+            <condition><![CDATA[User logged in and session ID obtained]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="403 Forbidden">
+            <condition><![CDATA[Email and password combination is incorrect]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+        </operation>
+      </resource>
+      <resource name="/auth/logout" subcontext="/rest">
+        <facets>
+          <facet>
+            <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+            <value>AuthEndpoint</value>
+            <documentation><![CDATA[Endpoint for Login, logout, and admin functions.]]></documentation>
+          </facet>
+        </facets>
+        <operation name="GET">
+            <additionalHeaderLabels>
+            </additionalHeaderLabels>
+          <documentation>
+            <![CDATA[Logout the user associated with the email account]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/auth/logout"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/auth/logout"/>
+          <parameter name="email" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the email of the user logging out]]>
+          </parameter>
+          <parameter name="session-id" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the session ID assigned to the user upon login.]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+          <statusCode code="200 OK">
+            <condition><![CDATA[User has successfully logged out]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="403 Forbidden">
+            <condition><![CDATA[Incorrect email and session ID]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+        </operation>
+      </resource>
+      <resource name="/name/create" subcontext="/rest">
+        <facets>
+          <facet>
+            <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+            <value>UserEndpoint</value>
+            <documentation><![CDATA[Endpoint for basic user account functionality]]></documentation>
+          </facet>
+        </facets>
+        <operation name="GET">
+            <additionalHeaderLabels>
+            </additionalHeaderLabels>
+          <documentation>
+            <![CDATA[Create a new user with the given characteristics.
+This function does NOT log the new user in.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/name/create"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/name/create"/>
+          <parameter name="email" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the new email to create a user account for]]>
+          </parameter>
+          <parameter name="password" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the password to associate with the email]]>
+          </parameter>
+          <parameter name="last-name" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the last name of the new user]]>
+          </parameter>
+          <parameter name="first-name" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the first name of the new user]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+          <statusCode code="200 OK">
+            <condition><![CDATA[User was created.]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="403 Forbidden">
+            <condition><![CDATA[Account already associated with provided email address]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="404 Not Found">
+            <condition><![CDATA[Email and/or password is/are incorrect]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+        </operation>
+      </resource>
+      <resource name="/name/name" subcontext="/rest">
+        <facets>
+          <facet>
+            <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+            <value>UserEndpoint</value>
+            <documentation><![CDATA[Endpoint for basic user account functionality]]></documentation>
+          </facet>
+        </facets>
+        <operation name="GET">
+            <additionalHeaderLabels>
+            </additionalHeaderLabels>
+          <documentation>
+            <![CDATA[Get the name of the user associated with the email. Note that
+a user can only retrieve their own name, i.e. not the names
+of any other users.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/name/name"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/name/name"/>
+          <parameter name="email" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the email associated with the user]]>
+          </parameter>
+          <parameter name="session-id" type="query" xmlTypeName="string" xmlTypeNamespace="http://www.w3.org/2001/XMLSchema">
+            <![CDATA[the session ID assigned to the user]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+          <statusCode code="200 OK">
+            <condition><![CDATA[User for user returned]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="403 Forbidden">
+            <condition><![CDATA[User's session ID is not correct]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+          <statusCode code="500 Internal Server Error">
+            <condition><![CDATA[User has validated and should have a name returned, but no name was returned]]></condition>
+            <additionalHeaders>
+            </additionalHeaders>
+          </statusCode>
+        </operation>
+      </resource>
+    </resources>
+    <facets>
+      <facet>
+        <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+        <value>AuthEndpoint</value>
+        <documentation><![CDATA[Endpoint for Login, logout, and admin functions.]]></documentation>
+      </facet>
+      <facet>
+        <name>org.codehaus.enunciate.contract.jaxrs.Resource</name>
+        <value>UserEndpoint</value>
+        <documentation><![CDATA[Endpoint for basic user account functionality]]></documentation>
+      </facet>
+    </facets>
+  </rest>
+  <packages>
+    <package id="basicAuthRW.web.ws">
+    </package>
+    <package id="basicAuthRW.web.api">
+    </package>
+  </packages>
+</api-docs>

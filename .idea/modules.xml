@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BasicAuthRW.iml" filepath="$PROJECT_DIR$/BasicAuthRW.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-auth-rw-core/basic-auth-rw-core.iml" filepath="$PROJECT_DIR$/basic-auth-rw-core/basic-auth-rw-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-auth-rw-webapp/basic-auth-rw-webapp.iml" filepath="$PROJECT_DIR$/basic-auth-rw-webapp/basic-auth-rw-webapp.iml" />
+    </modules>
+  </component>
+</project>
+

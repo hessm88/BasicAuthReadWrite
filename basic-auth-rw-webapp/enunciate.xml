@@ -1,0 +1,21 @@
+<enunciate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="http://enunciate.codehaus.org/schemas/enunciate-1.28.xsd"
+           includeReferenceTrailInErrors="true">
+
+  <!--import these packages for documentation-->
+  <api-import pattern="basicAuthRW.*"/>
+  <webapp mergeWebXML="src/main/webapp/WEB-INF/web.xml"/>
+  <!--<webapp mergeWebXML="../watch-config/webapp/WEB-INF/web.xml"/>-->
+  <modules>
+    <!--use the documentation for the 'basicAuthRW.we.ws'
+    package for the documentation splash page.-->
+    <docs splashPackage="basicAuthRW.web.ws">
+    </docs>
+
+    <spring-app>
+      <springImport uri="classpath:/basic-auth-rw-core-beans.xml"/>
+      <springImport uri="classpath:/basic-auth-rw-webapp-beans.xml"/>
+    </spring-app>
+  </modules>
+
+</enunciate>

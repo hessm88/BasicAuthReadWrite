@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wadl:application xmlns:wadl="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wadl:doc xmlns:enunciate="http://enunciate.codehaus.org/" enunciate:generatedBy="Enunciate-1.29"/>
+  <wadl:grammars/>
+  <wadl:resources base="http://localhost:8080/basic-auth-rw-webapp">
+    <wadl:resource path="/rest/auth/admin">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[(Admin) Retrieve all active emails and associated session ID's
+
+Logout the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user upon login.]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="*/*"/>
+          <wadl:representation mediaType="application/xml"/>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/xml/auth/admin">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[(Admin) Retrieve all active emails and associated session ID's
+
+Logout the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user upon login.]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/xml"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/json/auth/admin">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[(Admin) Retrieve all active emails and associated session ID's
+
+Logout the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user upon login.]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/rest/auth/login">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Login the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email of the user logging in]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="password" style="query">
+            <wadl:doc>
+              <![CDATA[the password associated with the email]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="*/*"/>
+          <wadl:representation mediaType="application/xml"/>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/xml/auth/login">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Login the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email of the user logging in]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="password" style="query">
+            <wadl:doc>
+              <![CDATA[the password associated with the email]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/xml"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/json/auth/login">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Login the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email of the user logging in]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="password" style="query">
+            <wadl:doc>
+              <![CDATA[the password associated with the email]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/rest/auth/logout">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Logout the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email of the user logging out]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user upon login.]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="*/*"/>
+          <wadl:representation mediaType="application/xml"/>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/xml/auth/logout">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Logout the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email of the user logging out]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user upon login.]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/xml"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/json/auth/logout">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Logout the user associated with the email account]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email of the user logging out]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user upon login.]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/rest/name/create">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Create a new user with the given characteristics.
+This function does NOT log the new user in.]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the new email to create a user account for]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="password" style="query">
+            <wadl:doc>
+              <![CDATA[the password to associate with the email]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="last-name" style="query">
+            <wadl:doc>
+              <![CDATA[the last name of the new user]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="first-name" style="query">
+            <wadl:doc>
+              <![CDATA[the first name of the new user]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="*/*"/>
+          <wadl:representation mediaType="application/xml"/>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/xml/name/create">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Create a new user with the given characteristics.
+This function does NOT log the new user in.]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the new email to create a user account for]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="password" style="query">
+            <wadl:doc>
+              <![CDATA[the password to associate with the email]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="last-name" style="query">
+            <wadl:doc>
+              <![CDATA[the last name of the new user]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="first-name" style="query">
+            <wadl:doc>
+              <![CDATA[the first name of the new user]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/xml"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/json/name/create">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Create a new user with the given characteristics.
+This function does NOT log the new user in.]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the new email to create a user account for]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="password" style="query">
+            <wadl:doc>
+              <![CDATA[the password to associate with the email]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="last-name" style="query">
+            <wadl:doc>
+              <![CDATA[the last name of the new user]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="first-name" style="query">
+            <wadl:doc>
+              <![CDATA[the first name of the new user]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/rest/name/name">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Get the name of the user associated with the email. Note that
+a user can only retrieve their own name, i.e. not the names
+of any other users.]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email associated with the user]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="*/*"/>
+          <wadl:representation mediaType="application/xml"/>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/xml/name/name">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Get the name of the user associated with the email. Note that
+a user can only retrieve their own name, i.e. not the names
+of any other users.]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email associated with the user]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/xml"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+    <wadl:resource path="/json/name/name">
+      <wadl:method name="GET">
+        <wadl:doc>
+          <![CDATA[Get the name of the user associated with the email. Note that
+a user can only retrieve their own name, i.e. not the names
+of any other users.]]>
+        </wadl:doc>
+        <wadl:request>
+          <wadl:param name="email" style="query">
+            <wadl:doc>
+              <![CDATA[the email associated with the user]]>
+            </wadl:doc>
+          </wadl:param>
+          <wadl:param name="session-id" style="query">
+            <wadl:doc>
+              <![CDATA[the session ID assigned to the user]]>
+            </wadl:doc>
+          </wadl:param>
+        </wadl:request>
+        <wadl:response>
+          <wadl:representation mediaType="application/json"/>
+        </wadl:response>
+      </wadl:method>
+    </wadl:resource>
+  </wadl:resources>
+</wadl:application>
