@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="basic-auth-rw-webapp:war">
-    <output-path>$PROJECT_DIR$/basic-auth-rw-webapp/target</output-path>
-    <root id="archive" name="basic-auth-rw-webapp-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="basic-auth-rw-webapp:war exploded" />
-    </root>
-  </artifact>
-</component>
